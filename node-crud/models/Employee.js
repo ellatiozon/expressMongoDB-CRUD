@@ -1,12 +1,27 @@
 const mongoose = require('mongoose');
 
 const employeeSchema = new mongoose.Schema({
-    name: String, 
-    address: String,
-    position: String,
-    salary: Number,
-    updated_at: { type: Date, default: Date.now }
-});
+  name: {
+    type: String,
+    required: true,
+    trim: true 
+  },
+  address: {
+    type: String,
+    required: true,
+    trim: true
+  },
+  position: {
+    type: String,
+    required: true,
+    trim: true
+  },
+  salary: {
+    type: Number,
+    required: true,
+    min: 0 
+  }
+}, { timestamps: true });
 
 const Employee = mongoose.model('Employee', employeeSchema);
 

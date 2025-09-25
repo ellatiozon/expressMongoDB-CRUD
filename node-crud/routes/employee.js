@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var Employee = require('../models/Employee');
 
-// 📌 LIST all employees
+//list all employees
 router.get('/', async (req, res) => {
   try {
     const employees = await Employee.find();
@@ -12,12 +12,12 @@ router.get('/', async (req, res) => {
   }
 });
 
-// 📌 SHOW create form
+//show create form
 router.get('/create', (req, res) => {
   res.render('employees/create');
 });
 
-// 📌 HANDLE create form (Save new employee)
+//handle create form/save new employee)
 router.post('/save', async (req, res) => {
   try {
     const newEmployee = new Employee({
@@ -33,7 +33,7 @@ router.post('/save', async (req, res) => {
   }
 });
 
-// 📌 SHOW single employee (Detail Page)
+//show single employee
 router.get('/show/:id', async (req, res) => {
   try {
     const employee = await Employee.findById(req.params.id);
@@ -44,7 +44,7 @@ router.get('/show/:id', async (req, res) => {
   }
 });
 
-// 📌 SHOW edit form
+//show edit form
 router.get('/edit/:id', async (req, res) => {
   try {
     const employee = await Employee.findById(req.params.id);
@@ -55,7 +55,7 @@ router.get('/edit/:id', async (req, res) => {
   }
 });
 
-// 📌 HANDLE update form
+//handle update form
 router.post('/update/:id', async (req, res) => {
   try {
     await Employee.findByIdAndUpdate(req.params.id, {
@@ -70,7 +70,7 @@ router.post('/update/:id', async (req, res) => {
   }
 });
 
-// 📌 DELETE employee
+//delete employee
 router.post('/delete/:id', async (req, res) => {
   try {
     await Employee.findByIdAndDelete(req.params.id);

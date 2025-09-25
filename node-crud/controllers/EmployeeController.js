@@ -6,28 +6,28 @@ const employeeController = require("../controllers/EmployeeController.js");
 
 // Define routes for CRUD operations
 
-// Get all employees
+//get all employees
 router.get('/', employeeController.list);
 
-// Get single employee by id
+//get single employee by id
 router.get('/show/:id', employeeController.show);
 
-// Create employee
+//create employee
 router.get('/create', employeeController.create);
 
-// Save employee
+//save employee
 router.post('/save', employeeController.save);
 
-// Edit employee
+//edit employee
 router.get('/edit/:id', employeeController.edit);
 
-// Update employee
+//update employee
 router.post('/update/:id', employeeController.update);
 
-// Delete employee
+//delete employee
 router.post('/delete/:id', employeeController.delete);
 
-// Export router as a module
+//export router as a module
 module.exports = router;
 
 const Employee = require('../models/Employee');
