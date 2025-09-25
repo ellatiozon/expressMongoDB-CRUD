@@ -1,0 +1,164 @@
+/* Base styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #F4F6F7;
+  color: #333333;
+}
+
+a {
+  text-decoration: none;
+  color: #3498DB;
+  transition: all 0.3s ease;
+}
+a:hover {
+  color: #21618C;
+}
+
+/* Container */
+.container {
+  max-width: 700px;
+  margin: 40px auto;
+  background: #FFFFFF;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Headings */
+h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #2C3E50;
+}
+h3 a {
+  display: inline-block;
+  background: #2980B9;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+h3 a:hover {
+  background: #3498DB;
+  color: #fff;
+}
+
+/* Forms */
+form table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+form td {
+  padding: 8px 0;
+}
+
+form input[type="text"],
+form input[type="number"],
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #BDC3C7;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #2980B9;
+  outline: none;
+}
+
+form button,
+form input[type="submit"] {
+  background: #2980B9;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+form button:hover,
+form input[type="submit"]:hover {
+  background: #3498DB;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  text-align: left;
+  padding: 12px;
+}
+
+th {
+  background: #2C3E50;
+  color: #fff;
+  border-radius: 8px 8px 0 0;
+}
+
+tr {
+  background: #FFFFFF;
+  transition: all 0.3s ease;
+}
+
+tr:hover {
+  background: #ECF0F1;
+}
+
+tr td a {
+  color: #2980B9;
+  font-weight: 500;
+}
+
+tr td a:hover {
+  text-decoration: underline;
+}
+
+/* Buttons inside table */
+table button.edit {
+  background: #27AE60;
+  color: #fff;
+}
+table button.edit:hover {
+  background: #2ECC71;
+}
+
+table button.delete {
+  background: #C0392B;
+  color: #fff;
+}
+table button.delete:hover {
+  background: #E74C3C;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  table th, table td {
+    padding: 8px;
+  }
+
+  form input, form textarea {
+    padding: 8px;
+  }
+}
